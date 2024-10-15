@@ -17,10 +17,7 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->longText('address');
-            $table->longText('id_number');
-            $table->integer('phone');
             $table->integer('landline')->nullable();
-            $table->longText('epfnumber');
 
         
             $table->timestamps();

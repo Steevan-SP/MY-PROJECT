@@ -14,7 +14,7 @@ class Receptionist extends Model
         'firstname' ,
         'lastname'  ,
         'email'     , 
-        'password'  ,
+        'password'  ,      
         'address'   ,
         'id_number' ,
         'phone'     ,
@@ -23,5 +23,9 @@ class Receptionist extends Model
 
 public function user(){
     return $this->hasone(User::class,'user_id');
+}
+public function guests()
+{
+    return $this->hasMany(Guest::class,'user_id');
 }
 }

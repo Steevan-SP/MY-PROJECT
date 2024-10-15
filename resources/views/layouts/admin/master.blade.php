@@ -115,5 +115,6 @@
     ***********************************-->
     <!-- Required vendors -->
     @include('layouts.admin._script')
+    @yield('js')
 </body>
 </html>

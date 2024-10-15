@@ -20,6 +20,9 @@ class UserSeeder extends Seeder
             'email' => 'abc@gmail.com',
             'role_id' => 1,
             'password' => Hash::make(12345678),
+            'id_number'=>'981241452V',
+            'phone' =>'0769780592',
+            'epfnumber'=>'E362',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);

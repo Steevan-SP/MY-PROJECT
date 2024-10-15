@@ -33,10 +33,10 @@ class UserStoreRequest extends FormRequest
             'email'     => 'required|email|unique:users',
             'password'  => 'required| string | min:8',
             'address'   => 'required',
-            'id_number' =>'required | max:12',
-            'phone'     => 'required | max:12',
+            'id_number' =>'required | max:12 |unique:users',
+            'phone'     => 'required | max:12 |unique:users',
             'landline'  => 'nullable | max:12',
-            'epfnumber' => 'required| min:4'
+            'epfnumber' => 'required| min:4 |unique:users'
 
                     ];
                                 }
@@ -47,10 +47,10 @@ class UserStoreRequest extends FormRequest
             'email'     => 'required|email|unique:users',
             'password'  => 'required | string | min:8',
             'address'   => 'required',
-            'id_number' =>'required | max:12',
-            'phone'     => 'required | max:12',
+            'id_number' =>'required | max:12 |unique:users',
+            'phone'     => 'required | max:12 |unique:users',
             'landline'  => 'nullable | max:12',
-            'epfnumber' => 'required| min:4'
+            'epfnumber' => 'required| min:4 |unique:users'
 
                 ];
             }

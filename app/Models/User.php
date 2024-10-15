@@ -21,6 +21,9 @@ class User extends Authenticatable
         
         'email',
         'password',
+        'id_number' ,
+        'phone'     ,
+        'epfnumber',
         'role_id',
         'user_id'
     ];
@@ -57,4 +60,31 @@ class User extends Authenticatable
     public function receptionist(){
         return $this->hasone(Receptionist::class,'user_id');
     }
+
+    public function guests()
+    {
+        return $this->hasMany(Guest::class,'user_id');
+    }
+    public function ticket()
+    {
+        return $this->hasOne(Ticket::class,'user_id');
+    }
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+    public function stocks()
+    {
+        return $this->hasMany(Stock::class);
+    }
+
+    public function billing()
+    {
+    return $this->hasMany(Billing::class);
+    }      
+    public function staffAllocations()
+    {
+        return $this->hasMany(StaffAllocation::class);
+    }
 }
+

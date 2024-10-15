@@ -25,4 +25,12 @@ class Admin extends Model
         return $this->hasone(User::class,'user_id');
     }
 
+    public function guests()
+    {
+        return $this->hasMany(Guest::class);
+    }
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class, 'admin_id');
+    }
 }
